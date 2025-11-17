@@ -1,0 +1,106 @@
+import { Cyber1, Cyber2, Cyber3, Cyber4, Cyber5, Cyber6, Cyber7, Cyber8, ManagedIcon1, ManagedIcon2, ManagedIcon3, ManagedIcon4 } from "@/components/Reusable/Images";
+
+export const NAV_LINKS = [
+  { name: "Home", link: "#" },
+  {
+    name: "Managed Protection",
+    dropdown: [
+      {
+        title: "Managed Detection & Response (MDR)",
+        desc: "Proactive detection, hunting, and neutralization of threats across endpoints and cloud.",
+        icon: ManagedIcon1,
+        link: "#",
+      },
+      {
+        title: "Managed SIEM",
+        desc: "Advanced log analysis and correlation to catch threats before they escalate.",
+        icon: ManagedIcon2,
+        link: "#",
+      },
+      {
+        title: "Managed Firewall Security",
+        desc: "Expert firewall policy management with real-time intrusion prevention.",
+        icon: ManagedIcon3,
+        link: "#",
+      },
+      {
+        title: "Endpoint Detection & Response",
+        desc: "Continuous endpoint monitoring, rapid detection, and automated response to stop threats at the source.",
+        icon: ManagedIcon4,
+        link: "#",
+      },
+    ],
+  },
+  {
+    name: "Cyber security projects ",
+    dropdown: [
+      { title: "Vulnerability Management", desc:'Spot weaknesses before attackers do. Continuous scanning, prioritization, and remediation guidance to keep your systems airtight.', icon:Cyber1, link: "#" },
+      { title: "Penetration Testing", desc:'Internal, external, and web app testing to expose real-world attack paths before criminals find them.', icon:Cyber2, link: "#" },
+      { title: "Governance, Risk, Compliance & Strategies", desc:'Align with frameworks like ASD Essential Eight, NIST, and ISO 27001.', icon:Cyber3, link: "#" },
+      { title: "Cyber Maturity Assessments", desc:'Pinpoint gaps and build a clear, actionable roadmap.', icon:Cyber4, link: "#" },
+      {title:'Threat Intelligence', desc:'Dark web monitoring, global threat feeds, and industry-specific alerts.', icon:Cyber5, link:'#'},
+      {title:'Cybersecurity Consulting', desc:'Tailored strategies for long-term resilience.', icon:Cyber6, link:'#'},
+      {title:'Cyber Awareness Training', desc:'Engaging, role-based learning to reduce risky behaviours.', icon:Cyber7, link:'#'},
+      {title:'Phishing & Email Security', desc:'Protect against BEC, spoofing, and malicious email threats.', icon:Cyber8, link:'#'},
+
+    ],
+  },
+  { name: "Company", link: "#" },
+  { name: "Resources", link: "#" },
+];
+
+
+
+
+export const Footer_LINKS = [
+  {name:"Quick Links",
+    dropdown:[
+      { name: "Home", link: "#" },
+      { name: "Company", link: "#" },
+      { name: "Resources", link: "#" },
+    ]
+  },
+    {
+    name: "Cyber security projects ",
+    dropdown: [
+      { title: "Vulnerability Management", desc:'Spot weaknesses before attackers do. Continuous scanning, prioritization, and remediation guidance to keep your systems airtight.', icon:Cyber1, link: "#" },
+      { title: "Penetration Testing", desc:'Internal, external, and web app testing to expose real-world attack paths before criminals find them.', icon:Cyber2, link: "#" },
+      { title: "Governance, Risk, Compliance & Strategies", desc:'Align with frameworks like ASD Essential Eight, NIST, and ISO 27001.', icon:Cyber3, link: "#" },
+      { title: "Cyber Maturity Assessments", desc:'Pinpoint gaps and build a clear, actionable roadmap.', icon:Cyber4, link: "#" },
+      {title:'Threat Intelligence', desc:'Dark web monitoring, global threat feeds, and industry-specific alerts.', icon:Cyber5, link:'#'},
+      {title:'Cybersecurity Consulting', desc:'Tailored strategies for long-term resilience.', icon:Cyber6, link:'#'},
+      {title:'Cyber Awareness Training', desc:'Engaging, role-based learning to reduce risky behaviours.', icon:Cyber7, link:'#'},
+      {title:'Phishing & Email Security', desc:'Protect against BEC, spoofing, and malicious email threats.', icon:Cyber8, link:'#'},
+
+    ],
+  },
+    {
+    name: "Managed Protection",
+    dropdown: [
+      {
+        title: "Managed Detection & Response (MDR)",
+        desc: "Proactive detection, hunting, and neutralization of threats across endpoints and cloud.",
+        icon: ManagedIcon1,
+        link: "#",
+      },
+      {
+        title: "Managed SIEM",
+        desc: "Advanced log analysis and correlation to catch threats before they escalate.",
+        icon: ManagedIcon2,
+        link: "#",
+      },
+      {
+        title: "Managed Firewall Security",
+        desc: "Expert firewall policy management with real-time intrusion prevention.",
+        icon: ManagedIcon3,
+        link: "#",
+      },
+      {
+        title: "Endpoint Detection & Response",
+        desc: "Continuous endpoint monitoring, rapid detection, and automated response to stop threats at the source.",
+        icon: ManagedIcon4,
+        link: "#",
+      },
+    ],
+  },
+]
