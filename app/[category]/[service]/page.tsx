@@ -38,8 +38,6 @@ export default function ServicePage({ params }: PageProps) {
       <Hero
         webVideo={serviceInfo.bannerVideoWeb}
         mobileVideo={serviceInfo.bannerVideoMobile}
-        title={serviceInfo.title}
-        description=""
       />
       <Content text={serviceInfo.AnimatedText} />
       <GridLayout title={serviceInfo.gridTitle} items={serviceInfo.grid} />
