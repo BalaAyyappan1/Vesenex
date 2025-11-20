@@ -1,8 +1,9 @@
 import React from "react";
+import { StaticImageData } from "next/image";
 
 interface HeroVideoProps {
-  webVideo: string;
-  mobileVideo: string;
+  webVideo: string | StaticImageData;
+  mobileVideo: string | StaticImageData;
   title?: string;
   description?: string;
 }
@@ -25,7 +26,7 @@ const HeroVideo: React.FC<HeroVideoProps> = ({
         playsInline
         preload="auto"
       >
-        <source src={webVideo} type="video/mp4" />
+        <source src={typeof webVideo === "string" ? webVideo : webVideo.src} type="video/mp4" />
       </video>
 
       {/* Mobile Video */}
@@ -37,7 +38,7 @@ const HeroVideo: React.FC<HeroVideoProps> = ({
         playsInline
         preload="auto"
       >
-        <source src={mobileVideo} type="video/mp4" />
+        <source src={typeof mobileVideo === "string" ? mobileVideo : mobileVideo.src} type="video/mp4" />
       </video>
 
       {/* Content */}

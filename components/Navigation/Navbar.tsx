@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed z-[9999] w-full px-4 sm:px-6 py-3 sm:py-4">
+      <div className="absolute z-[9999] w-full px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <Image
@@ -60,25 +60,32 @@ const Navbar = () => {
                     key={index}
                     className="relative"
                     onMouseEnter={() => item.dropdown && handleMouseEnter(index)}
-                    onMouseLeave={() => item.dropdown && handleMouseLeave()}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <Link
-                      href={item.link || '#'}
-                      className="text-[#6A737C] hover:text-[#C4D8FB] whitespace-nowrap text-[14px] xl:text-[16px] font-medium transition-colors duration-200 flex items-center"
-                    >
-                      {item.name}
-                      {item.dropdown && (
+                    {item.dropdown ? (
+                      <button
+                        className="text-[#6A737C] hover:text-[#C4D8FB] whitespace-nowrap text-[14px] xl:text-[16px] font-medium transition-colors duration-200 flex items-center"
+                      >
+                        {item.name}
                         <FaChevronDown 
                           className={`w-4 h-4 ml-1 transform transition-transform duration-200 ${
                             activeDropdown === index ? "rotate-180" : ""
                           }`}
                         />
-                      )}
-                    </Link>
+                      </button>
+                    ) : (
+                      <Link
+                        href={('link' in item ? item.link : '#') as string}
+                        className="text-[#6A737C] hover:text-[#C4D8FB] whitespace-nowrap text-[14px] xl:text-[16px] font-medium transition-colors duration-200 flex items-center"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
 
                     {/* Dropdown Menu */}
                     {item.dropdown && activeDropdown === index && (
-                      <div className="absolute top-full -left-120 mt-7 w-[60rem] px-4 bg-white/10 border border-[#65656517] backdrop-blur-2xl rounded-[12px] py-4 z-50 grid grid-cols-2 gap-2">
+                      <div className="absolute top-full -left-120 pt-7 w-[60rem] z-50">
+                        <div className="px-4 bg-white/10 border border-[#65656517] backdrop-blur-2xl rounded-[12px] py-4 grid grid-cols-2 gap-2">
                         {item.dropdown.map((dropdownItem, dropdownIndex) => (
                           <Link
                             key={dropdownIndex}
@@ -105,6 +112,7 @@ const Navbar = () => {
                             </div>
                           </Link>
                         ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -222,7 +230,7 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    href={item.link}
+                    href={('link' in item ? item.link : '#') as string}
                     onClick={closeMobileMenu}
                     className="block px-4 py-3 text-[#6A737C] hover:text-[#C4D8FB] hover:bg-[#232629] rounded-lg transition-all duration-200 font-medium text-[16px]"
                   >
